@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Set</title>
+    <style>
+        body {
+            background-color: black;
+        }
+        
+        .container {
+            color: white;
+            border-left: 16px solid red;
+            font-size: 30px;
+            border-radius: 39px;
+            background-color: gray;
+            padding: 40px;
+        }
+        
+        #time {
+            font-weight: bold;
+            color: black;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        Current time is <span id="time"></span>
+    </div>
+
+    <script>
+        function updateTime() {
+
+            document.getElementById("time").innerHTML = new Date();
+        }
+
+        setInterval(updateTime, 1000);
+    </script>
+</body>
+
+</html>
